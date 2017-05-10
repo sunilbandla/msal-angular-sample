@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<button (click)="login()" type="button" *ngIf="!user">Login</button>
+<button (click)="callAPI()" type="button" *ngIf="user">Call Graph's /me API</button>
+<button (click)="logout()" type="button" *ngIf="user">Logout</button>
+<h3 *ngIf="user">
+    Hello {{ user.name }}
+</h3>
+<h3 *ngIf="userInfo">
+    {{ userInfo | json }}
+</h3>
+<strong *ngIf="loginFailed">
+  Login unsuccessful
+</strong>
+<strong *ngIf="apiCallFailed">
+  Graph API call unsuccessful
+</strong>
+
