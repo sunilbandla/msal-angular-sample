@@ -8,15 +8,15 @@ import { GraphService } from 'app/services/graph.service';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    public user: Msal.User = null;
+    public user: any = null;
     public userInfo: any = null;
     public apiCallFailed: boolean;
     public loginFailed: boolean;
 
     constructor(private authService: AuthService,
-                private graphService: GraphService) {
+        private graphService: GraphService) {
     }
-    
+
     public login() {
         this.loginFailed = false;
         this.authService.login()
