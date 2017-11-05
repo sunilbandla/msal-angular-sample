@@ -31,11 +31,11 @@ export class AppComponent {
             });
     }
 
-    private callAPI() {
+    private callAPI(version: string) {
         this.apiCallFailed = false;
         this.authService.getToken()
             .then(token => {
-                this.graphService.getUserInfo(token)
+                this.graphService.getUserInfo(token, version)
                     .subscribe(data => {
                         this.userInfo = data;
                     }, error => {
