@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import '../../../node_modules/msal/out/msal';
-/// <reference path="../../../node_modules/msal/out/msal.d.ts" />
+import '../../../node_modules/msal/dist/msal';
+/// <reference path="../../../node_modules/msal/dist/msal.d.ts" />
 
 @Injectable()
 export class AuthService {
